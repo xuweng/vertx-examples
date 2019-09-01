@@ -21,7 +21,7 @@ public class Client extends AbstractVerticle {
 
     WebClient client = WebClient.create(vertx);
 
-    client.get(8080, "localhost", "/").send(ar -> {
+    client.get(8081, "localhost", "/").send(ar -> {
       if (ar.succeeded()) {
         HttpResponse<Buffer> response = ar.result();
         System.out.println("Got HTTP response with status " + response.statusCode() + " with data " +
